@@ -1,0 +1,25 @@
+export const colors = {
+  bg: '#1E1E1E',
+  surface: '#2A2A2A',
+  surfaceLight: '#333333',
+  textPrimary: '#F5F5F5',
+  textSecondary: '#A0A0A0',
+  textMuted: '#707070',
+  accent: '#8A9A5B',
+  accentLight: '#A8B87A',
+  accentDark: '#6B7A3E',
+  slateBlue: '#6B7DB3',
+  slateBlueLight: '#8B9DD3',
+  success: '#4CAF50',
+  warning: '#FF9800',
+  error: '#F44336',
+  glassBg: 'rgba(255, 255, 255, 0.05)',
+  glassBorder: 'rgba(255, 255, 255, 0.1)',
+  glassHighlight: 'rgba(255, 255, 255, 0.07)',
+  overlay: 'rgba(0, 0, 0, 0.6)',
+  white: '#FFFFFF',
+  black: '#000000',
+  transparent: 'transparent',
+} as const;
+
+export type ColorKey = keyof typeof colors;

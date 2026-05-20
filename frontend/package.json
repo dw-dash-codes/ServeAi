@@ -1,0 +1,40 @@
+{
+  "name": "serveai-frontend",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "lint": "eslint . --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-native-picker/picker": "2.11.1",
+    "@tanstack/react-query": "^5.28.0",
+    "axios": "^1.6.7",
+    "expo": "~54.0.0",
+    "expo-constants": "~18.0.0",
+    "expo-haptics": "~15.0.0",
+    "expo-linking": "~8.0.0",
+    "expo-location": "~19.0.8",
+    "expo-router": "~6.0.0",
+    "expo-status-bar": "~3.0.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-gesture-handler": "~2.28.0",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-screens": "~4.16.0",
+    "react-native-svg": "15.12.1",
+    "react-native-web": "^0.21.0",
+    "zustand": "^4.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@types/react": "~19.1.0",
+    "babel-plugin-transform-import-meta": "^2.3.3",
+    "typescript": "^5.3.0"
+  }
+}
