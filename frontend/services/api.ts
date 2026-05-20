@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { OrchestratorResponse, Provider, Booking, Dispute, AgentLog, Notification, Review } from '../types';
 
-// Yahan humne Vercel ka live URL fix kar diya hai
-const API_URL = 'https://serve-ai-ten.vercel.app/api';
+
+const API_URL = 'https://serveai-backend.onrender.com/api';
 
 const client = axios.create({
   baseURL: API_URL,
