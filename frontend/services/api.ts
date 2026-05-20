@@ -1,22 +1,8 @@
 import axios from 'axios';
 import { OrchestratorResponse, Provider, Booking, Dispute, AgentLog, Notification, Review } from '../types';
-import Constants from 'expo-constants';
 
-function getApiUrl(): string {
-  if (typeof globalThis !== 'undefined' && (globalThis as any).window && (globalThis as any).window.location) {
-    const hostname = (globalThis as any).window.location.hostname;
-    const host = hostname || 'localhost';
-    return `http://${host}:3000/api`;
-  }
-  const hostUri = Constants.expoConfig?.hostUri;
-  if (hostUri) {
-    const host = hostUri.split(':')[0];
-    return `http://${host}:3000/api`;
-  }
-  return process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000/api';
-}
-
-const API_URL = getApiUrl();
+// Yahan humne Vercel ka live URL fix kar diya hai
+const API_URL = 'https://serve-ai-ten.vercel.app/api';
 
 const client = axios.create({
   baseURL: API_URL,
@@ -152,8 +138,6 @@ export async function addReview(params: {
   const { data } = await client.post('/reviews', params);
   return data;
 }
-
-
 
 export async function getFavorites(): Promise<{ favorites: string[] }> {
   const { data } = await client.get('/favorites');

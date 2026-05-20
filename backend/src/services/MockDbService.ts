@@ -41,7 +41,11 @@ export class MockDbService {
 
   private saveJson<T>(filename: string, data: T[]): void {
     const filePath = path.join(this.dbPath, filename);
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
+    try {
+      fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
+    } catch (error) {
+      console.log(`Vercel Read-Only Mode: ${filename} ka data sirf memory mein save hua hai, file mein nahi.`);
+    }
   }
 
   getProviders(): Provider[] {
